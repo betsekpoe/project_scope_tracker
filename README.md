@@ -11,5 +11,7 @@ Generates visual timeline of scope changes
 
 Each request contains the time, what changed, what was before and after
 
-
+PACKAGES USED:
+- tailwindcss
+- flaticon-uicons (regular-rounded)
 

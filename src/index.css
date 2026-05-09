@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root {
+	--jet-black: #292f36ff;
+	--accentColor: #0b85a0;
+	--accentColorHover: #116b7f;
+	--mint-cream: #f7fff7ff;
+	--grapefruit-pink: #ff6b6bff;
+
+	--listHover: #f8f8f8;
+	
+	--textMuted: #8693a1;
+	--fontBold: 600;
+	--fontBolder: calc(var(--fontBold) + 100);
+
+	--pending: #ffff99;
+}
+/* 
+body{
+	background-color: var(--mint-cream);
+} */
+
+h1 {
+	font-size: 3rem;
+	font-weight: 650;
+	color: var(--jet-black);
+}
+
+p {
+	font-size: 1.3rem;
+}
+
+.accentBtn {
+	background-color: var(--accentColor);
+	color: white;
+	font-weight: var(--fontBold);
+	transition: 0.05s ease-in;
+
+	&:hover {
+		background-color: var(--accentColorHover);
+	}
+}
+
+.title {
+	font-size: x-large;
+	font-weight: var(--fontBolder);
+	color: var(--jet-black);
+	letter-spacing: -0.5px;
+}
+
+input {
+	outline: none;
+	border: none;
+}
+
+.project-status{
+	background-color: var(--pending);
+}
