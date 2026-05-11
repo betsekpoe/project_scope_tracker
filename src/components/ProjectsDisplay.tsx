@@ -7,7 +7,7 @@ type Props = {}
 
 const ProjectsDisplay = ({}: Props) => {
 	return (
-		<div>
+		<>
 			<ProjectsListBar />
 
 			<table className="w-full">
@@ -23,7 +23,7 @@ const ProjectsDisplay = ({}: Props) => {
 					))}
 				</tbody>
 			</table>
-		</div>
+		</>
 	)
 }
 
