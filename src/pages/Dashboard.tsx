@@ -1,4 +1,5 @@
-import ProjectsDisplay from "./ProjectsDisplay"
+import ProjectsDisplay from "../components/ProjectsDisplay"
+import Button from "../components/Button"
 
 type Props = {}
 
@@ -12,10 +13,7 @@ function Dashboard({}: Props) {
 					<p>message</p>
 				</div>
 				<div>
-					<button className="text-white p-3 rounded-2xl cursor-pointer accentBtn flex items-center gap-2">
-						<i className="fi fi-rr-multiple"></i>{" "}
-						<span>New Project</span>
-					</button>
+					<Button buttonText="New Project" route="/create-project" icon="fi fi-rr-multiple"/>
 				</div>
 			</div>
 
