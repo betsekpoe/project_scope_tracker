@@ -17,7 +17,7 @@ const Button = ({
 			className="text-white p-3 rounded-2xl cursor-pointer flex items-center gap-2  accentBtn"
 			onClick={() => navigate(route)}
 		>
-			<i className={`${icon} flex items-center`}></i>
+			<i className={`${icon}`}></i>
 			<span>{buttonText}</span>
 		</button>
 	)
