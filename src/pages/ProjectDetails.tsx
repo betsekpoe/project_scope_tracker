@@ -1,22 +1,23 @@
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import TimelineCard from "../components/TimelineCard"
 import { projectsData } from "../data/projectsData"
 
 const ProjectDetails = () => {
 	const { projectId } = useParams()
 
-	const project = projectsData.find(proj => proj.projectId === projectId)
+	const project = projectsData.find((proj) => proj.projectId === projectId)
 
-	if (!project){
+	if (!project) {
 		return <div>Project not foiund</div>
 	}
 
 	return (
-		<div className="flex flex-col gap-8 max-w-4xl mx-auto">
+		<div className="flex flex-col gap-8 max-w-4xl mx-auto text-(----jet-black)">
 			<div className="border-b border-gray-200 pb-6">
-				<h1 className="text-3xl font-bold text-gray-900">
-					{project.projectTitle}
-				</h1>
+				<Link to={"/dashboard"}>
+					<i className="fi fi-rr-arrow-left text-2xl hover:bg-(--accentColorMuted) rounded-lg px-4 py-1 flex items-center w-fit"></i>
+				</Link>
+				<h1 className="text-3xl font-bold">{project.projectTitle}</h1>
 				<p className="text-gray-600 mt-2">Project Timeline & Updates</p>
 			</div>
 
