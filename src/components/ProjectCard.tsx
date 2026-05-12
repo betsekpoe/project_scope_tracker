@@ -26,7 +26,7 @@ const ProjectCard = ({
 				alt={projectTitle}
 				className="w-full h-48 object-cover"
 			/>
-			<div className="flex flex-col gap-4 p-5 flex-grow">
+			<div className="flex flex-col gap-4 p-5 grow">
 				<h3 className="text-base font-semibold text-gray-900 line-clamp-2 leading-tight">{projectTitle}</h3>
 				
 				<div className="flex items-center justify-between mt-auto pt-3 border-t border-gray-100">
