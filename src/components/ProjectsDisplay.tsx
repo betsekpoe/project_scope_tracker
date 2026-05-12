@@ -18,7 +18,7 @@ const ProjectsDisplay = ({}: Props) => {
 							projectId={projectsData.projectId}
 							projectTitle={projectsData.projectTitle}
 							lastUpdated={projectsData.lastUpdated}
-							projectStatus={projectsData.projectStatus}
+							projectStatus={projectsData.projectStatus as "in progress" | "completed"}
 							imageUrl={projectsData.imageUrl}
 						/>
 					))}
