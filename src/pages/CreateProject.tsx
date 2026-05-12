@@ -2,7 +2,6 @@ import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 
 import { useProjects } from "../context/ProjectContext"
-import SnapshotCard from "../components/SnapshotCard"
 import AddSnapshotCard from "../components/AddSnapshotCard"
 
 const CreateProject = () => {
