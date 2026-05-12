@@ -3,6 +3,7 @@
 :root {
 	--jet-black: #292f36ff;
 	--accentColor: #0b85a0;
+	--accentColorMuted: #98acb0;
 	--accentColorHover: #116b7f;
 	--mint-cream: #f7fff7ff;
 	--grapefruit-pink: #ff6b6bff;
@@ -48,11 +49,11 @@ p {
 	letter-spacing: -0.5px;
 }
 
-input {
+input, textarea {
 	outline: none;
 	border: none;
 }
 
 .project-status{
-	background-color: var(--pending);
+	background-color: var(--pending);	
 }

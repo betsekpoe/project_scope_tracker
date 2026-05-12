@@ -1,62 +1,46 @@
 export const projectsData = [
 	{
+		projectId: "001",
 		projectTitle: "Conference 2026",
+		description:
+			"Complete brand identity overhaul including logo, color palette, and typography system.",
+		status: "In progress",
+
+		dateCreated: new Date("2026-01-15"),
 		lastUpdated: new Date("2026-05-08"),
 		projectStatus: "in progress",
-		imageUrl: "src/assets/images/dashboardPreviews/aces.webps"
+		imageUrl: "/snapshots/p1-3.png",
+
+		snapshots: [
+			{
+				snapshotId: "snap_001",
+				snapshotIndex: 1,
+				snapshotDescription:
+					"First round of logo explorations focusing on minimalist geometric approach",
+				snapshotImage: "/snapshots/p1-1.png",
+				snapshotDateAdded: new Date("2026-01-20"),
+				version: "v1.0",
+			},
+			{
+				snapshotId: "snap_009",
+				snapshotIndex: 2,
+				snapshotTitle: "Infographic Concepts",
+				snapshotDescription:
+					"Data visualization explorations for sustainability metrics",
+				snapshotImage: "/snapshots/p1-2.png",
+				snapshotDateAdded: new Date("2026-03-05"),
+				version: "v1.0",
+			},
+			{
+				snapshotId: "snap_010",
+				snapshotIndex: 3,
+				snapshotTitle: "Print-Ready Pages",
+				snapshotDescription:
+					"Final layouts with print specifications and color management",
+				snapshotImage: "/snapshots/p1-3.png",
+				snapshotDateAdded: new Date("2026-04-25"),
+				version: "v2.0",
+			},
+		],
 	},
-	{
-		projectTitle: "Brand Refresh Campaign",
-		lastUpdated: new Date("2026-05-05"),
-		projectStatus: "completed",
-		imageUrl: "src/assets/images/dashboardPreviews/brand-refresh.webp"
-	},
-	{
-		projectTitle: "Annual Report 2025",
-		lastUpdated: new Date("2026-04-28"),
-		projectStatus: "completed",
-		imageUrl: "src/assets/images/dashboardPreviews/annual-report.webp"
-	},
-	{
-		projectTitle: "Mobile App Redesign",
-		lastUpdated: new Date("2026-05-09"),
-		projectStatus: "completed",
-		imageUrl: "src/assets/images/dashboardPreviews/mobile-app.webp"
-	},
-	{
-		projectTitle: "Summer Festival Poster",
-		lastUpdated: new Date("2026-05-01"),
-		projectStatus: "completed",
-		imageUrl: "src/assets/images/dashboardPreviews/festival-poster.webp"
-	},
-	{
-		projectTitle: "Website Launch",
-		lastUpdated: new Date("2026-04-22"),
-		projectStatus: "completed",
-		imageUrl: "src/assets/images/dashboardPreviews/website-launch.webp"
-	},
-	{
-		projectTitle: "Product Packaging Series",
-		lastUpdated: new Date("2026-05-07"),
-		projectStatus: "completed",
-		imageUrl: "src/assets/images/dashboardPreviews/packaging.webp"
-	},
-	{
-		projectTitle: "Editorial Magazine Layout",
-		lastUpdated: new Date("2026-04-18"),
-		projectStatus: "completed",
-		imageUrl: "src/assets/images/dashboardPreviews/magazine.webp"
-	},
-	{
-		projectTitle: "Motion Graphics Reel",
-		lastUpdated: new Date("2026-05-03"),
-		projectStatus: "completed",
-		imageUrl: "src/assets/images/dashboardPreviews/motion-reel.webp"
-	},
-	{
-		projectTitle: "Identity System Guidelines",
-		lastUpdated: new Date("2026-04-30"),
-		projectStatus: "pending",
-		imageUrl: "src/assets/images/dashboardPreviews/identity-system.webp"
-	}
 ]
