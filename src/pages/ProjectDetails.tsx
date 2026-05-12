@@ -1,12 +1,13 @@
 import { Link, useParams } from "react-router-dom"
 import TimelineCard from "../components/TimelineCard"
-import { projectsData } from "../data/projectsData"
 import AddSnapshotCard from "../components/SnapshotCard"
+import { useProjects } from "../context/ProjectContext"
 
 const ProjectDetails = () => {
 	const { projectId } = useParams()
+	const { projects } = useProjects()
 
-	const project = projectsData.find((proj) => proj.projectId === projectId)
+	const project = projects.find((proj) => proj.projectId === projectId)
 
 	if (!project) {
 		return <div>Project not found</div>
@@ -32,7 +33,7 @@ const ProjectDetails = () => {
 					/>
 				))}
 
-				<AddSnapshotCard/>
+				<AddSnapshotCard />
 			</div>
 		</div>
 	)

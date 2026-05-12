@@ -1,24 +1,28 @@
 import ProjectCard from "./ProjectCard"
 import ProjectsListBar from "./ProjectsListBar"
 
-import { projectsData } from "../data/projectsData"
+import { useProjects } from "../context/ProjectContext"
 
-type Props = {}
+const ProjectsDisplay = () => {
+	const { projects } = useProjects()
 
-const ProjectsDisplay = ({}: Props) => {
 	return (
 		<>
 			<ProjectsListBar />
 
 			<table className="w-full">
 				<tbody className="grid grid-cols-4 gap-4">
-					{projectsData.map((projectsData) => (
+					{projects.map((projectsData) => (
 						<ProjectCard
 							key={projectsData.projectId}
 							projectId={projectsData.projectId}
 							projectTitle={projectsData.projectTitle}
 							lastUpdated={projectsData.lastUpdated}
-							projectStatus={projectsData.projectStatus as "in progress" | "completed"}
+							projectStatus={
+								projectsData.projectStatus as
+									| "in progress"
+									| "completed"
+							}
 							imageUrl={projectsData.imageUrl}
 						/>
 					))}

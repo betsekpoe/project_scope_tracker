@@ -1,17 +1,46 @@
 import { useState } from "react"
+import {useNavigate, useParams }from "react-router-dom"
+import { useProjects} from "../context/ProjectContext"
 
-const AddSnapshotCard = () => {
+const SnapshotCard = () => {
 	const [preview, setPreview] = useState<string | null>(null)
+	const [description, setDescription] = useState("")
+	const [imageFile, setImageFile] = useState<File | null>(null)
+
+	const navigate = useNavigate()
+	const { projectId } = useParams()
+	const { addSnapshot } = useProjects()
 
 	const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const file = event.target.files?.[0]
 		if (file) {
 			setPreview(URL.createObjectURL(file))
+			setImageFile(file)
 		}
+	}
+	const handleSubmit = (event: React.FormEvent) => {
+		event.preventDefault()
+	
+		if (!preview || !description || !projectId) return
+	
+		// Add snapshot to existing project
+		addSnapshot(projectId, {
+			snapshotDescription: description,
+			snapshotImage: preview,
+			snapshotDateAdded: new Date(),
+		})
+
+		// Navigate back to project details page
+		navigate(`/project/${projectId}`)
+
+		// Reset form
+		setPreview(null)
+		setDescription("")
+		setImageFile(null)
 	}
 
 	return (
-		<form className="flex flex-col p-5 gap-4">
+		<form onSubmit={handleSubmit} className="flex flex-col p-5 gap-4">
 			<div className="flex gap-5 rounded-lg bg-white">
 				<label className="cursor-pointer">
 					<input
@@ -29,6 +58,8 @@ const AddSnapshotCard = () => {
 
 				<div className="flex flex-col justify-center flex-1">
 					<textarea
+						value={description}
+						onChange={(event) => setDescription(event.target.value)}
 						required
 						className="text-xl text-gray-800 resize-none"
 						placeholder="Snapshot description..."
@@ -49,4 +80,4 @@ const AddSnapshotCard = () => {
 	)
 }
 
-export default AddSnapshotCard
+export default SnapshotCard
