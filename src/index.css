@@ -41,8 +41,12 @@ p {
 	color: var(--jet-black);
 }
 
-input, textarea {
+input {
 	@apply outline-none border-none;
+}
+
+textarea{
+	outline: none;
 }
 
 .project-status {

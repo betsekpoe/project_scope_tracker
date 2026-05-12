@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom"
 import TimelineCard from "../components/TimelineCard"
 import { projectsData } from "../data/projectsData"
+import AddSnapshotCard from "../components/SnapshotCard"
 
 const ProjectDetails = () => {
 	const { projectId } = useParams()
@@ -30,6 +31,8 @@ const ProjectDetails = () => {
 						snapshotImage={snapshot.snapshotImage}
 					/>
 				))}
+
+				<AddSnapshotCard/>
 			</div>
 		</div>
 	)
