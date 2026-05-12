@@ -14,28 +14,22 @@
 	--fontBold: 600;
 	--fontBolder: calc(var(--fontBold) + 100);
 
-	--pending: #ffff99;
+	--statusProgress: #c3ad08;
+	--statusCompleted: #0e2ead;
 }
-/* 
-body{
-	background-color: var(--mint-cream);
-} */
 
 h1 {
-	font-size: 3rem;
-	font-weight: 650;
+	@apply text-5xl font-bold;
 	color: var(--jet-black);
 }
 
 p {
-	font-size: 1.3rem;
+	@apply text-xl;
 }
 
 .accentBtn {
+	@apply px-4 py-2 text-white font-semibold transition-colors duration-50 ease-in rounded-md;
 	background-color: var(--accentColor);
-	color: white;
-	font-weight: var(--fontBold);
-	transition: 0.05s ease-in;
 
 	&:hover {
 		background-color: var(--accentColorHover);
@@ -43,17 +37,26 @@ p {
 }
 
 .title {
-	font-size: x-large;
-	font-weight: var(--fontBolder);
+	@apply text-lg font-bold tracking-tight ;
 	color: var(--jet-black);
-	letter-spacing: -0.5px;
 }
 
 input, textarea {
-	outline: none;
-	border: none;
+	@apply outline-none border-none;
 }
 
-.project-status{
-	background-color: var(--pending);	
+.project-status {
+	@apply px-3 py-1.5 text-sm font-medium rounded-full;
+}
+
+.completed{
+	color: var(--statusCompleted);
+}
+
+.inprogress{
+	color: var(--statusProgress);
+}
+
+i {
+	@apply flex items-center;
 }
