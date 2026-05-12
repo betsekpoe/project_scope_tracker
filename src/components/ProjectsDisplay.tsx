@@ -12,9 +12,10 @@ const ProjectsDisplay = ({}: Props) => {
 
 			<table className="w-full">
 				<tbody className="grid grid-cols-4 gap-4">
-					{projectsData.map((projectsData, index) => (
+					{projectsData.map((projectsData) => (
 						<ProjectCard
-							key={index}
+							key={projectsData.projectId}
+							projectId={projectsData.projectId}
 							projectTitle={projectsData.projectTitle}
 							lastUpdated={projectsData.lastUpdated}
 							projectStatus={projectsData.projectStatus}

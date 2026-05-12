@@ -1,26 +1,32 @@
+import { useParams } from "react-router-dom"
 import TimelineCard from "../components/TimelineCard"
 import { projectsData } from "../data/projectsData"
 
 const ProjectDetails = () => {
+	const { projectId } = useParams()
+
+	const project = projectsData.find(proj => proj.projectId === projectId)
+
+	if (!project){
+		return <div>Project not foiund</div>
+	}
+
 	return (
 		<div className="flex flex-col gap-8 max-w-4xl mx-auto">
 			<div className="border-b border-gray-200 pb-6">
 				<h1 className="text-3xl font-bold text-gray-900">
-					Conference 2026
+					{project.projectTitle}
 				</h1>
 				<p className="text-gray-600 mt-2">Project Timeline & Updates</p>
 			</div>
 
 			<div className="timeline flex flex-col gap-6">
-				{projectsData.map((project, index) => (
+				{project?.snapshots.map((snapshot) => (
 					<TimelineCard
-						snapshotDescription={
-							project.snapshots[index].snapshotDescription
-						}
-						snapshotDateAdded={
-							project.snapshots[index].snapshotDateAdded
-						}
-						snapshotImage={project.snapshots[index].snapshotImage}
+						key={snapshot.snapshotId}
+						snapshotDescription={snapshot.snapshotDescription}
+						snapshotDateAdded={snapshot.snapshotDateAdded}
+						snapshotImage={snapshot.snapshotImage}
 					/>
 				))}
 			</div>

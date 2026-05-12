@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom"
+
 type Props = {
+	projectId: string
 	projectTitle: string
 	lastUpdated: Date
 	projectStatus: string
@@ -6,6 +9,7 @@ type Props = {
 }
 
 const ProjectCard = ({
+	projectId,
 	projectTitle,
 	lastUpdated,
 	projectStatus,
@@ -19,8 +23,11 @@ const ProjectCard = ({
 		day: "numeric",
 	})
 
+	const navigate = useNavigate()
+
 	return (
-		<div className="border border-gray-200 rounded-lg cursor-pointer transition ease-in-out duration-200 hover:shadow-lg hover:border-gray-300 bg-white overflow-hidden h-full flex flex-col">
+		<div className="border border-gray-200 rounded-lg cursor-pointer transition ease-in-out duration-200 hover:shadow-lg hover:border-gray-300 bg-white overflow-hidden h-full flex flex-col"
+		onClick={()=> {navigate(`/project/${projectId}`)}}>
 			<img
 				src={imageUrl}
 				alt={projectTitle}
