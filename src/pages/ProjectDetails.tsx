@@ -14,7 +14,7 @@ const ProjectDetails = () => {
 	}
 
 	return (
-		<div className="flex flex-col gap-8 max-w-4xl mx-auto text-(----jet-black)">
+		<div className="w-full flex flex-col gap-8 max-w-4xl mx-auto text-(----jet-black)">
 			<div className="border-b border-gray-200 pb-6">
 				<Link to={"/dashboard"}>
 					<i className="fi fi-rr-arrow-left text-2xl hover:bg-(--accentColorMuted) rounded-lg px-4 py-1 w-fit"></i>
