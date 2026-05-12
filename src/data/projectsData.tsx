@@ -4,7 +4,6 @@ export const projectsData = [
 		projectTitle: "Conference 2026",
 		description:
 			"Complete brand identity overhaul including logo, color palette, and typography system.",
-		status: "In progress",
 
 		dateCreated: new Date("2026-01-15"),
 		lastUpdated: new Date("2026-05-08"),
